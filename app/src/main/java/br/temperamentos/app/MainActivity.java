@@ -1055,10 +1055,24 @@ public class MainActivity extends AppCompatActivity{
 					PieChart pieChart = (PieChart) findViewById(R.id.pieChart);
 
 					List<PieEntry> pieEntries = new ArrayList<>();
-					pieEntries.add(new PieEntry(Math.round(sang), "Sanguinêo"));
-					pieEntries.add(new PieEntry(Math.round(fleu), "Fleumático"));
-					pieEntries.add(new PieEntry(Math.round(mela), "Melancólico"));
-					pieEntries.add(new PieEntry(Math.round(cole), "Colérico"));
+					
+					
+					if(sang > 0){
+						pieEntries.add(new PieEntry(Math.round(sang), "Sanguinêo"));
+					}
+					if(fleu > 0){
+						pieEntries.add(new PieEntry(Math.round(fleu), "Fleumático"));
+					}
+					if(mela > 0){
+						pieEntries.add(new PieEntry(Math.round(mela), "Melancólico"));
+					}
+					if(cole > 0){
+						pieEntries.add(new PieEntry(Math.round(cole), "Colérico"));
+					}
+					
+					if(sang == 0.0 && fleu == 0.0 && mela == 0.0 && cole == 0.0){
+						pieEntries.add(new PieEntry(Math.round(0), "Nenhum"));
+					}
 
 					PieDataSet dataSet = new PieDataSet(pieEntries, "Colors");
 					dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
