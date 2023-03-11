@@ -1057,6 +1057,8 @@ public class MainActivity extends AppCompatActivity{
 					List<PieEntry> pieEntries = new ArrayList<>();
 					
 					
+					//ira criar os itens. da Pizza
+					
 					if(sang > 0){
 						pieEntries.add(new PieEntry(Math.round(sang), "Sanguinêo"));
 					}
