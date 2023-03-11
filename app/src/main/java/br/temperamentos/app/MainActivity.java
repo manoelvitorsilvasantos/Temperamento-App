@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity{
 	
 	private static final int SOBRE = Menu.FIRST;
 	
+
+	
+	/**
+	* getar nuneros randomicos
+	*/
 	public static int random(int range) { 
 		return (int)((java.lang.Math.random() * range) + 1);
 	}
@@ -1064,9 +1069,13 @@ public class MainActivity extends AppCompatActivity{
 					
 					
 					
+				
+					
 				}
 			});
 	}
+	
+	
 	public void s(View v){
 		setContentView(R.layout.about);
 		TextView title = (TextView) findViewById(R.id.txtSobre);
